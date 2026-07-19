@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varanasi Date Proposal ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #d6336c;
+    }
+
+    .btn {
+      background: #d6336c;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .btn:hover {
+      background: #a61e4d;
+    }
+
+    #dateInput, #doneMessage {
+      display: none;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin: 5px;
+    }
+
+    #doneMessage {
+      font-size: 1.5em;
+      color: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wanna go on a date with me to Varanasi? 🌸</h1>
+    <button class="btn" id="yesBtn">Yes</button>
+    <button class="btn" id="noBtn">No</button>
+
+    <div id="dateInput">
+      <p>Great! 💖 Tell me when:</p>
+      <input type="date" id="startDate"> to 
+      <input type="date" id="endDate">
+      <br><br>
+      <button class="btn" id="doneBtn">Done</button>
+    </div>
+
+    <div id="doneMessage">😊 Yay! Date Confirmed! 💕</div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const dateInput = document.getElementById("dateInput");
+    const doneBtn = document.getElementById("doneBtn");
+    const doneMessage = document.getElementById("doneMessage");
+
+    yesBtn.addEventListener("click", () => {
+      dateInput.style.display = "block";
+      noBtn.style.display = "none"; // hide No button
+    });
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * 200) - 100;
+      const y = Math.floor(Math.random() * 200) - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    doneBtn.addEventListener("click", () => {
+      dateInput.style.display = "none";
+      doneMessage.style.display = "block";
+    });
+  </script>
+</body>
+</html>
+
